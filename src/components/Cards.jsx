@@ -2,7 +2,7 @@ import React from "react";
 
 function Cards() {
   return (
-    <div className="w-full h-screen flex items-center px-16 gap-5">
+    <div data-scroll data-scroll-section data-scroll-speed="-0.2" className="w-full h-screen flex items-center px-16 gap-5">
       <div className="cardcontainer h-[60vh] w-1/2">
         <div className="card relative rounded-xl w-full h-full flex items-center justify-center bg-[#004D43]">
           <img className="w-32" src="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" alt="" />

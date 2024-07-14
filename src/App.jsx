@@ -8,6 +8,8 @@ import Featured from "./components/Featured";
 import Cards from "./components/Cards";
 import Footer from "./Footer";
 import LocomotiveScroll from "locomotive-scroll";
+import Review from "./components/Review";
+import Ready from "./components/Ready";
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
   return (
@@ -18,7 +20,9 @@ function App() {
       <About />
       <Eyes />
       <Featured />
+      <Review />
       <Cards />
+      <Ready />
       <Footer />
     </div>
   );

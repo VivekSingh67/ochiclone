@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="w-full flex gap-5  h-screen bg-zinc-900 p-20">
+    <div data-scroll data-scroll-section data-scroll-speed="-0.3" className="w-full flex gap-5  h-screen bg-zinc-900 p-20">
       <div className="w-1/2 h-full flex flex-col justify-between">
         <div className="heading">
           <h1 className="text-[6vw] font-semibold uppercase leading-none -mb-4">
@@ -42,10 +42,75 @@ function Footer() {
         </svg>
       </div>
       <div className="w-1/2">
-          <h1 className="text-[6vw] font-semibold uppercase leading-none -mb-6">
-            presentations
-          </h1>
+        <h1 className="text-[6vw] font-semibold uppercase leading-none -mb-6">
+          presentations
+        </h1>
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="flex flex-col mt-16 w-1/2">
+              <p className="mb-3">S:</p>
+              {["Instagram", "Behance", "Facebook", "Linkedin"].map(
+                (item, index) => {
+                  return (
+                    <a
+                      key={index}
+                      href="#"
+                      className="relative text-sm mb-1 hover:delay-100 group"
+                    >
+                      {item}
+                      <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+                    </a>
+                  );
+                }
+              )}
+            </div>
+            <div className="mt-7">
+              <p className="mb-3">L:</p>
+              <p className="relative text-sm mb-1 hover:delay-100 group">
+                202-1965 W 4th Ave
+                <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+              </p>
+              <p className="relative text-sm mb-1 hover:delay-100 group">
+                Vancouver, Canada
+                <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+              </p>
+              <p className="relative text-sm mb-1 mt-4 hover:delay-100 group">
+                30 Chukarina St
+                <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+              </p>
+              <p className="relative text-sm mb-1 hover:delay-100 group">
+                Lviv, Ukraine
+                <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+              </p>
+            </div>
+            <div className="mt-6">
+              <p className="mb-3">E:</p>
+              <p className="relative text-sm mb-1 hover:delay-100 group">
+                hello@ochidesign
+                <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col mt-16">
+            <p className="mb-3">M:</p>
+            {["home", "service", "our work", "about us", "insights", "contact us"].map(
+              (item, index) => {
+                return (
+                  <a
+                    key={index}
+                    href="#"
+                    className="relative capitalize w-fit text-sm mb-1 hover:delay-100 group"
+                  >
+                    {item}
+                    <span className="absolute bottom-0 right-0 w-full h-[1px] bg-zinc-100 transition-all duration-300 group-hover:w-0"></span>
+                  </a>
+                );
+              }
+            )}
+          </div>
         </div>
+      </div>
     </div>
   );
 }
